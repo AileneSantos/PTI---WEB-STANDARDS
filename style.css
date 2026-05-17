@@ -7,7 +7,13 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #222;
+  color: #1a1a1a;
+}
+
+:root {
+  --primary: #2b6cb0;
+  --primary-light: #ebf4ff;
+  --primary-dark: #1e4e8c;
 }
 
 header {
@@ -22,13 +28,19 @@ header {
 .logo {
   font-size: 22px;
   font-weight: 600;
+  color: var(--primary);
 }
 
 nav a {
   margin-left: 30px;
   text-decoration: none;
-  color: #222;
+  color: var(--primary-dark);
   font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
 }
 
 .hero {
@@ -38,6 +50,8 @@ nav a {
   justify-content: center;
   align-items: flex-start;
   padding: 0 60px;
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: white;
 }
 
 .hero h1 {
@@ -60,6 +74,7 @@ nav a {
   font-size: 28px;
   margin-bottom: 30px;
   font-weight: 500;
+  color: var(--primary);
 }
 
 .section p {
@@ -69,7 +84,7 @@ nav a {
 }
 
 .light {
-  background: #fafafa;
+  background: var(--primary-light);
 }
 
 .login-form {
@@ -87,21 +102,29 @@ nav a {
   padding: 10px;
   border: 1px solid #ccc;
   margin-top: 5px;
+  border-radius: 4px;
 }
 
 .login-form button {
   margin-top: 20px;
   padding: 12px;
   border: none;
-  background: #222;
+  background: var(--primary);
   color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: var(--primary-dark);
 }
 
 footer {
   padding: 80px 60px;
   font-size: 22px;
   font-weight: 500;
+  background: var(--primary);
+  color: white;
 }
 
 @media (max-width: 768px) {
