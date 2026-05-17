@@ -1,117 +1,138 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-:root {
-  --primary: #2c7a7b;
-  --secondary: #e6fffa;
-  --text: #333;
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  padding: 25px 60px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--primary);
+  font-size: 22px;
+  font-weight: 600;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 30px;
   text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
+  color: #222;
+  font-size: 14px;
 }
 
 .hero {
-  height: 80vh;
-  background: linear-gradient(to right, #2c7a7b, #68d391);
-  color: white;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  padding: 0 60px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 42px;
+  font-weight: 500;
+  max-width: 500px;
 }
 
 .hero p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
-
 .section {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 60px;
 }
 
 .section h2 {
-  color: var(--primary);
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .section p {
   max-width: 600px;
-  margin: auto;
-  color: var(--text);
+  line-height: 1.7;
+  color: #444;
 }
 
 .light {
-  background: var(--secondary);
+  background: #fafafa;
 }
 
 .login-form {
-  max-width: 300px;
-  margin: auto;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
 }
 
+.login-form label {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
 .login-form input {
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ccc;
+  margin-top: 5px;
 }
 
 .login-form button {
-  padding: 10px;
-  background: var(--primary);
-  color: white;
+  margin-top: 20px;
+  padding: 12px;
   border: none;
+  background: #222;
+  color: white;
   cursor: pointer;
 }
 
 footer {
-  padding: 40px;
-  text-align: center;
-  background: #f5f5f5;
+  padding: 80px 60px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-  nav {
-    display: flex;
+  header {
+    padding: 20px;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 15px;
   }
 
   nav a {
-    margin: 10px 0;
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .hero {
+    padding: 0 20px;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  footer {
+    padding: 60px 20px;
   }
 }
